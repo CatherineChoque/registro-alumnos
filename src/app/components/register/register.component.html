@@ -1,0 +1,16 @@
+<div class="card mb-3">
+    <div class="card-header d-flex justify-content-between align-center">
+        {{register.name}}
+        <div>
+            <button class="btn btn-primary me-3" (click)="register.hide = !register.hide">Mas detalle</button>
+            <button class="btn btn-danger ms-3" (click)="deleteRegister(register)">Eliminar</button>
+        </div>
+    </div>
+    <div class="card-body" [hidden]="register.hide">
+        <li>Apellidos Completos: {{register.lastName}}</li>
+        <li>Fecha de Nacimiento: {{register.dateOfBirth}}</li>
+        <li> DNI: {{register.dni}}</li>
+        <li>Telefono: {{register.phoneNumber}}</li>
+        <!-- <button  class="btn btn-success" (click)="editarRegister()">Editar</button> -->
+    </div>
+</div>

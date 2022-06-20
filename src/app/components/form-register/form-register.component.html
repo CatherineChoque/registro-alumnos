@@ -1,0 +1,29 @@
+<div class="card mt-3">
+    <div class="card-body">
+        <form action="" [formGroup]="formRegister" (submit)="addRegister()">
+            <div class="form-group">
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Nombres Completos</label>
+                    <input type="text"  class="form-control" id="name" placeholder="Nombre Completos" formControlName="name">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Apellidos Completos</label>
+                    <input type="text"  class="form-control" id="lastName" placeholder="Apellidos Completos" formControlName="lastName">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Fecha de Nacimiento</label>
+                    <input type="date"  class="form-control" id="date" placeholder="Fecha de Nacimiento" formControlName="dateOfBirth">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">DNI</label>
+                    <input type="text"  class="form-control" id="dni" placeholder="DNI" formControlName="dni">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Telefono</label>
+                    <input type="text"  class="form-control" id="phoneNumber" placeholder="Telefono" formControlName="phoneNumber">
+                </div>
+            </div>
+            <button class="btn btn-primary btn-block" [disabled]="formRegister.invalid">Registrar</button>
+        </form>
+    </div>
+</div>
